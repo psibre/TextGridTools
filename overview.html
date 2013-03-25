@@ -1,0 +1,130 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Overview &mdash; TextGridTools 0.9.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.9.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TextGridTools 0.9.0 documentation" href="index.html" />
+    <link rel="next" title="API" href="api.html" />
+    <link rel="prev" title="TextGridTools" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="TextGridTools"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TextGridTools 0.9.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://www.praat.org">Praat</a>  has become a de-facto standard tool for phonetic analysis, transcription of speech, and classification of speech events. To this end, it provides an intuitive point-and-click user interface for selecting intervals or points in the audio data and for labelling these with arbitrary text, which is then displayed time-aligned alongside the waveform. Praat supports annotation on multiple independent tiers, allowing for application of multidimensional annotation schemata, annotations with different degrees of granularity, or for independent transcriptions of individual participants in a dialogue recording.</p>
+<p>Much of Praat&#8217;s usefulness comes from its programmability via a simple embedded scripting language, ‘Praat script,’ which allows full access to Praat&#8217;s functions and data structures. Coupled with basic control flow mechanisms, Praat script allows automatisation of tedious and time consuming tasks. However, in spite of its many virtues and its ease of use, Praat script lacks basic features of modern programming languages, such as return statements in functions, iterators, or even basic data structures such as lists or hash tables. Additionally, not being a general-purpose language, it falls short of functionality which is not directly tied to Praat itself, such as plotting or statistical analysis.</p>
+<p>These limitations are particularly evident when Praat script is used to manipulate Praat&#8217;s native annotation objects, stored in plain text &#8216;TextGrid&#8217; files. Such tasks often do not require any of Praat&#8217;s advanced audio analysis features but would greatly benefit from access to specialised text processing tools and simple integration with external data analysis libraries. Faced with lack of such functionality, Praat users wishing to carry out more complex analyses on their annotations are forced to first export their data into some intermediate format, such as comma-separated files, before importing them into a data analysis framework of their choice.</p>
+<p>To overcome these shortcomings, we have developed &#8216;TextGridTools,&#8217; a Python package offering functions to parse, manipulate and query Praat annotations. TextGridTools implements all of TextGrid-related objects, such as interval and point tiers, as native Python classes and offers a clean API for accessing their attributes. Additional functions are available to perform more complex operations, such as calculation of inter-annotator agreement measures between several annotation tiers.</p>
+<p>Coupled with Python&#8217;s expressive syntax, TextGridTools allows for more compact and human-readable program code than that of Praat script. Additionally, with access to a fully-fledged programming language, users are able to carry out their analyses in one step, without Praat script serving as a mere exporting tool. Using TextGridTools annotations can be accessed directly from a Python program and processed using one of Python&#8217;s many data analysis libraries (e.g., <a class="reference external" href="http://www.numpy.org">NumPy</a>, <a class="reference external" href="http://www.scipy.org">SciPy</a>, <a class="reference external" href="http://www.matplotlib.org">Matplotlib</a>, <a class="reference external" href="http://www.rpy.sourceforge.net">RPy</a> or <a class="reference external" href="http://www.pandas.pydata.org/">pandas</a>, cf. <a class="reference internal" href="#mckinney">[McKinney]</a>).</p>
+<p>TextGridTools are released under the GNU General Public Licence v3.0, and hosted on <a class="reference external" href="https://github.com/hbuschme/TextGridTools">GitHub</a> allowing users to contribute their changes and extend the existing functionality.</p>
+<table class="docutils citation" frame="void" id="mckinney" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[McKinney]</a></td><td>McKinney, W. <em>Python for Data Analysis: Agile Tools for Real World Data</em>. O’Reilly, Sebastopol, CA, 2012.</td></tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">TextGridTools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="api.html"
+                        title="next chapter">API</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/overview.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="TextGridTools"
+             >previous</a> |</li>
+        <li><a href="index.html">TextGridTools 0.9.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Hendrik Buschmeier, Marcin Włodarczak.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
