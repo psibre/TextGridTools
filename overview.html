@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Overview &mdash; TextGridTools 0.9.0 documentation</title>
+    <title>Overview &mdash; TextGridTools 1.0.0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.9.0',
+        VERSION:     '1.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="TextGridTools 0.9.0 documentation" href="index.html" />
+    <link rel="top" title="TextGridTools 1.0.0 documentation" href="index.html" />
     <link rel="next" title="API" href="api.html" />
     <link rel="prev" title="TextGridTools" href="index.html" /> 
   </head>
@@ -45,7 +45,7 @@
         <li class="right" >
           <a href="index.html" title="TextGridTools"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">TextGridTools 0.9.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">TextGridTools 1.0.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -60,14 +60,26 @@
 <p>Much of Praat&#8217;s usefulness comes from its programmability via a simple embedded scripting language, ‘Praat script,’ which allows full access to Praat&#8217;s functions and data structures. Coupled with basic control flow mechanisms, Praat script allows automatisation of tedious and time consuming tasks. However, in spite of its many virtues and its ease of use, Praat script lacks basic features of modern programming languages, such as return statements in functions, iterators, or even basic data structures such as lists or hash tables. Additionally, not being a general-purpose language, it falls short of functionality which is not directly tied to Praat itself, such as plotting or statistical analysis.</p>
 <p>These limitations are particularly evident when Praat script is used to manipulate Praat&#8217;s native annotation objects, stored in plain text &#8216;TextGrid&#8217; files. Such tasks often do not require any of Praat&#8217;s advanced audio analysis features but would greatly benefit from access to specialised text processing tools and simple integration with external data analysis libraries. Faced with lack of such functionality, Praat users wishing to carry out more complex analyses on their annotations are forced to first export their data into some intermediate format, such as comma-separated files, before importing them into a data analysis framework of their choice.</p>
 <p>To overcome these shortcomings, we have developed &#8216;TextGridTools,&#8217; a Python package offering functions to parse, manipulate and query Praat annotations. TextGridTools implements all of TextGrid-related objects, such as interval and point tiers, as native Python classes and offers a clean API for accessing their attributes. Additional functions are available to perform more complex operations, such as calculation of inter-annotator agreement measures between several annotation tiers.</p>
-<p>Coupled with Python&#8217;s expressive syntax, TextGridTools allows for more compact and human-readable program code than that of Praat script. Additionally, with access to a fully-fledged programming language, users are able to carry out their analyses in one step, without Praat script serving as a mere exporting tool. Using TextGridTools annotations can be accessed directly from a Python program and processed using one of Python&#8217;s many data analysis libraries (e.g., <a class="reference external" href="http://www.numpy.org">NumPy</a>, <a class="reference external" href="http://www.scipy.org">SciPy</a>, <a class="reference external" href="http://www.matplotlib.org">Matplotlib</a>, <a class="reference external" href="http://www.rpy.sourceforge.net">RPy</a> or <a class="reference external" href="http://www.pandas.pydata.org/">pandas</a>, cf. <a class="reference internal" href="#mckinney">[McKinney]</a>).</p>
-<p>TextGridTools are released under the GNU General Public Licence v3.0, and hosted on <a class="reference external" href="https://github.com/hbuschme/TextGridTools">GitHub</a> allowing users to contribute their changes and extend the existing functionality.</p>
-<table class="docutils citation" frame="void" id="mckinney" rules="none">
+<p>Coupled with Python&#8217;s expressive syntax, TextGridTools allows for more compact and human-readable program code than that of Praat script. Additionally, with access to a fully-fledged programming language, users are able to carry out their analyses in one step, without Praat script serving as a mere exporting tool. Using TextGridTools annotations can be accessed directly from a Python program and processed using one of Python&#8217;s many data analysis libraries (e.g., <a class="reference external" href="http://www.numpy.org">NumPy</a>, <a class="reference external" href="http://www.scipy.org">SciPy</a>, <a class="reference external" href="http://www.matplotlib.org">Matplotlib</a>, <a class="reference external" href="http://www.rpy.sourceforge.net">RPy</a> or <a class="reference external" href="http://www.pandas.pydata.org/">pandas</a>, cf. <a class="footnote-reference" href="#id3" id="id1">[1]</a>).</p>
+<p>TextGridTools is released under the GNU General Public Licence v3.0, and hosted on <a class="reference external" href="https://github.com/hbuschme/TextGridTools">GitHub</a> allowing users to contribute their changes and extend the existing functionality.  TextGridTools is compatible with both Python 2 and Python 3.</p>
+<p>For a longer overview as well as for citing TextGridTools,  see <a class="footnote-reference" href="#id4" id="id2">[2]</a> (<a class="reference external" href="http://pub.uni-bielefeld.de/download/2561620/2563287">PDF</a>).</p>
+<div class="section" id="installing">
+<h2>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h2>
+<p>TextGridTools is part of the <a class="reference external" href="https://pypi.python.org/pypi/tgt/1.0">Python Package Index</a> repository . To get the latest stable version run <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">tgt</span></tt>.</p>
+<p>To get the latest development version, use the GitHub repository: <tt class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/hbuschme/TextGridTools.git</span></tt>.</p>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[McKinney]</a></td><td>McKinney, W. <em>Python for Data Analysis: Agile Tools for Real World Data</em>. O’Reilly, Sebastopol, CA, 2012.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>McKinney, W. (2012). <em>Python for Data Analysis: Agile Tools for Real World Data</em>. Sebastopol, CA: O&#8217;Reilly.</td></tr>
 </tbody>
 </table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Buschmeier, H. and Włodarczak, M. (2013). TextGridTools: A TextGrid Processing and Analysis Toolkit for Python. In P. Wagner (ed.) <em>Tagungsband der 24. Konferenz zur Elektronischen Sprachsignalverarbeitung (ESSV 2013)</em>. Dresden: TUDpress, pp. 152-157.</td></tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
@@ -76,6 +88,14 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Overview</a><ul>
+<li><a class="reference internal" href="#installing">Installing</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="index.html"
                         title="previous chapter">TextGridTools</a></p>
@@ -119,7 +139,7 @@
         <li class="right" >
           <a href="index.html" title="TextGridTools"
              >previous</a> |</li>
-        <li><a href="index.html">TextGridTools 0.9.0 documentation</a> &raquo;</li> 
+        <li><a href="index.html">TextGridTools 1.0.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
